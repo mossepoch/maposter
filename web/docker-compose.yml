@@ -43,8 +43,8 @@ services:
       context: ../
       dockerfile: web/backend/Dockerfile
     container_name: maposter-backend
-    expose:
-      - "8100"
+    ports:
+      - "8100:8100"
     volumes:
       - ../themes:/app/project/themes:ro
       - ../fonts:/app/project/fonts:ro
@@ -66,8 +66,8 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: maposter-frontend
-    expose:
-      - "3000"
+    ports:
+      - "3000:3000"
     environment:
       - NEXT_PUBLIC_API_BASE=/api
     depends_on:
