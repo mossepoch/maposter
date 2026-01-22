@@ -44,9 +44,24 @@
 
 #### 快速部署
 
+**方式 1：使用预构建镜像（最快）**
+
 ```bash
 # 1. 克隆项目
-git clone https://github.com/your-username/maposter.git
+git clone https://github.com/mossepoch/maposter.git
+cd maposter
+
+# 2. 拉取预构建镜像并启动服务
+cd web
+docker-compose pull
+docker-compose up -d
+```
+
+**方式 2：从源码构建**
+
+```bash
+# 1. 克隆项目
+git clone https://github.com/mossepoch/maposter.git
 cd maposter
 
 # 2. 一键部署

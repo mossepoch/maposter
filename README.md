@@ -44,9 +44,24 @@ For users who prefer a graphical interface for online poster generation.
 
 #### Quick Start
 
+**Option 1: Using Pre-built Docker Images (Fastest)**
+
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/maposter.git
+git clone https://github.com/mossepoch/maposter.git
+cd maposter
+
+# 2. Pull pre-built images and start services
+cd web
+docker-compose pull
+docker-compose up -d
+```
+
+**Option 2: Build from Source**
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/mossepoch/maposter.git
 cd maposter
 
 # 2. One-click deployment

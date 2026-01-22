@@ -38,6 +38,7 @@ services:
 
   # FastAPI 后端
   backend:
+    image: mossepoch/maposter-backend:latest
     build:
       context: ../
       dockerfile: web/backend/Dockerfile
@@ -60,6 +61,7 @@ services:
 
   # Next.js 前端
   frontend:
+    image: mossepoch/maposter-frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
