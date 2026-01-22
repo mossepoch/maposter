@@ -1,0 +1,167 @@
+export const translations = {
+  en: {
+    // Header
+    generate: 'GENERATE',
+    gallery: 'GALLERY',
+
+    // Generator Page
+    configuration: 'CONFIGURATION',
+    status: 'STATUS',
+    location: 'Location',
+    city: 'City',
+    coordinates: 'Coordinates',
+    countryPlaceholder: 'Select Country',
+    cityPlaceholder: 'Select City',
+    latitudePlaceholder: 'Latitude',
+    longitudePlaceholder: 'Longitude',
+    theme: 'Theme',
+    posterSize: 'Poster Size',
+    distance: 'Distance',
+    distanceGuide1: 'Small/dense cities (Venice, Amsterdam center)',
+    distanceGuide2: 'Medium cities, focused downtown (Paris, Barcelona)',
+    distanceGuide3: 'Large metros (Tokyo, Mumbai) - Higher memory usage',
+    distanceGuide4: 'Very large areas - May cause memory issues, not recommended',
+    highMemoryWarning: 'High Memory Usage',
+    networkType: 'Network Type',
+    outputFormat: 'Output Format',
+    generateThumbnail: 'Generate Thumbnail',
+    hideAttribution: 'Hide Attribution',
+    generateMap: 'GENERATE MAP',
+    generating: 'GENERATING...',
+    fillForm: 'Fill in the form and click "Generate Map" to start',
+    progress: 'Progress',
+    generatingMsg: 'Generating map poster... This may take 30-60 seconds.',
+    error: 'Error',
+    cityLabel: 'City',
+    themeLabel: 'Theme',
+    coordsLabel: 'Coordinates',
+    download: 'Download',
+    downloadPng: 'Download PNG',
+    share: 'Share',
+    publishToGallery: 'Publish to Gallery',
+    enterAdminPassword: 'Enter Admin Password',
+    password: 'Password',
+    cancel: 'Cancel',
+    publish: 'Publish',
+    publishing: 'Publishing...',
+    publishSuccess: 'Successfully published to gallery!',
+    publishFailed: 'Failed to publish. Please check your password.',
+    invalidPassword: 'Invalid password',
+
+    // Gallery Page
+    mapGallery: 'MAP GALLERY',
+    explorePosters: 'Explore city map posters from around the world',
+    themes: 'Themes',
+    noPostersmsg: 'No posters generated yet. Create your first one!',
+
+    // Detail Page
+    backToGallery: '← Back to Gallery',
+    posterVariations: 'Poster Variations',
+
+    // Footer
+    copyright: '© 2025 Justlogo.ai - All Rights Reserved',
+
+    // Theme Names
+    'theme.Autumn': 'Autumn',
+    'theme.Blueprint': 'Blueprint',
+    'theme.Contrast Zones': 'Contrast Zones',
+    'theme.Copper Patina': 'Copper Patina',
+    'theme.Feature-Based Shading': 'Feature-Based Shading',
+    'theme.Forest': 'Forest',
+    'theme.Gradient Roads': 'Gradient Roads',
+    'theme.Japanese Ink': 'Japanese Ink',
+    'theme.Midnight Blue': 'Midnight Blue',
+    'theme.Monochrome Blue': 'Monochrome Blue',
+    'theme.Neon Cyberpunk': 'Neon Cyberpunk',
+    'theme.Noir': 'Noir',
+    'theme.Ocean': 'Ocean',
+    'theme.Pastel Dream': 'Pastel Dream',
+    'theme.Sunset': 'Sunset',
+    'theme.Terracotta': 'Terracotta',
+    'theme.Warm Beige': 'Warm Beige'
+  },
+  zh: {
+    // Header
+    generate: '生成',
+    gallery: '画廊',
+
+    // Generator Page
+    configuration: '配置',
+    status: '状态',
+    location: '位置',
+    city: '城市',
+    coordinates: '坐标',
+    countryPlaceholder: '选择国家',
+    cityPlaceholder: '选择城市',
+    latitudePlaceholder: '纬度',
+    longitudePlaceholder: '经度',
+    theme: '主题',
+    posterSize: '海报尺寸',
+    distance: '距离',
+    distanceGuide1: '小型/密集城市（威尼斯、阿姆斯特丹中心）',
+    distanceGuide2: '中型城市，聚焦市中心（巴黎、巴塞罗那）',
+    distanceGuide3: '大型都市（东京、孟买）- 内存占用较高',
+    distanceGuide4: '超大范围 - 可能导致内存不足，不推荐使用',
+    highMemoryWarning: '高内存占用',
+    networkType: '网络类型',
+    outputFormat: '输出格式',
+    generateThumbnail: '生成缩略图',
+    hideAttribution: '隐藏版权信息',
+    generateMap: '生成地图',
+    generating: '生成中...',
+    fillForm: '填写表单后点击"生成地图"开始',
+    progress: '进度',
+    generatingMsg: '正在生成地图海报... 这可能需要 30-60 秒。',
+    error: '错误',
+    cityLabel: '城市',
+    themeLabel: '主题',
+    coordsLabel: '坐标',
+    download: '下载',
+    downloadPng: '下载 PNG',
+    share: '分享',
+    publishToGallery: '发布到画廊',
+    enterAdminPassword: '输入管理员密码',
+    password: '密码',
+    cancel: '取消',
+    publish: '发布',
+    publishing: '发布中...',
+    publishSuccess: '成功发布到画廊！',
+    publishFailed: '发布失败，请检查密码。',
+    invalidPassword: '密码错误',
+
+    // Gallery Page
+    mapGallery: '地图画廊',
+    explorePosters: '探索来自世界各地的城市地图海报',
+    themes: '主题',
+    noPostersmsg: '还没有生成海报。创建您的第一张吧！',
+
+    // Detail Page
+    backToGallery: '← 返回画廊',
+    posterVariations: '海报变体',
+
+    // Footer
+    copyright: '© 2025 Justlogo.ai - 保留所有权利',
+
+    // Theme Names
+    'theme.Autumn': '秋季',
+    'theme.Blueprint': '蓝图',
+    'theme.Contrast Zones': '对比区域',
+    'theme.Copper Patina': '铜绿',
+    'theme.Feature-Based Shading': '特征阴影',
+    'theme.Forest': '森林',
+    'theme.Gradient Roads': '渐变道路',
+    'theme.Japanese Ink': '日式水墨',
+    'theme.Midnight Blue': '午夜蓝',
+    'theme.Monochrome Blue': '单色蓝',
+    'theme.Neon Cyberpunk': '霓虹赛博朋克',
+    'theme.Noir': '黑色',
+    'theme.Ocean': '海洋',
+    'theme.Pastel Dream': '粉彩梦境',
+    'theme.Sunset': '日落',
+    'theme.Terracotta': '赤陶',
+    'theme.Warm Beige': '暖米色'
+  }
+} as const;
+
+export type Language = keyof typeof translations;
+export type TranslationKey = keyof typeof translations.en;

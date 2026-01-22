@@ -1,0 +1,79 @@
+services:
+  # Nginx 反向代理
+  nginx:
+    image: nginx:alpine
+    container_name: maposter-nginx
+    ports:
+      - "80:80"
+    command: >
+      /bin/sh -c "echo '
+      server {
+          listen 80;
+          server_name _;
+          client_max_body_size 50M;
+
+          location / {
+              proxy_pass http://frontend:3000;
+              proxy_http_version 1.1;
+              proxy_set_header Upgrade \$$http_upgrade;
+              proxy_set_header Connection \"upgrade\";
+              proxy_set_header Host \$$host;
+              proxy_cache_bypass \$$http_upgrade;
+          }
+
+          location /api/ {
+              proxy_pass http://backend:8100/;
+              proxy_set_header Host \$$host;
+              proxy_set_header X-Real-IP \$$remote_addr;
+              proxy_set_header X-Forwarded-For \$$proxy_add_x_forwarded_for;
+          }
+      }
+      ' > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    depends_on:
+      - frontend
+      - backend
+    restart: unless-stopped
+    networks:
+      - maposter-network
+
+  # FastAPI 后端
+  backend:
+    build:
+      context: ../
+      dockerfile: web/backend/Dockerfile
+    container_name: maposter-backend
+    expose:
+      - "8100"
+    volumes:
+      - ../themes:/app/project/themes:ro
+      - ../fonts:/app/project/fonts:ro
+      - ../cache:/app/project/cache
+      - ../posters:/app/project/posters
+      - ../create_map_poster.py:/app/project/create_map_poster.py
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MALLOC_TRIM_THRESHOLD_=100000
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
+    restart: unless-stopped
+    networks:
+      - maposter-network
+
+  # Next.js 前端
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: maposter-frontend
+    expose:
+      - "3000"
+    environment:
+      - NEXT_PUBLIC_API_BASE=/api
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - maposter-network
+
+networks:
+  maposter-network:
+    driver: bridge

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Newsprint Design System */
+.newsprint-bg {
+  background-color: #F9F9F7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23111111' fill-opacity='0.04' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.hard-shadow-hover {
+  transition: all 0.2s ease-out;
+}
+
+.hard-shadow-hover:hover {
+  box-shadow: 4px 4px 0px 0px #111111;
+  transform: translate(-2px, -2px);
+}
+
+/* 去除 Tailwind 默认圆角 */
+* {
+  border-radius: 0 !important;
+}
+
+/* 语言切换按钮样式 */
+.language-switcher {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 50;
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #111111;
+  color: #F9F9F7;
+  border: 2px solid #111111;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.language-btn:hover {
+  background: #F9F9F7;
+  color: #111111;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: #F9F9F7;
+  border: 2px solid #111111;
+  min-width: 180px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+}
+
+.language-dropdown.active {
+  display: block;
+}
+
+.language-option {
+  padding: 12px 16px;
+  border-bottom: 1px solid #E5E5E0;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.language-option:last-child {
+  border-bottom: none;
+}
+
+.language-option:hover {
+  background: #E5E5E0;
+}
+
+.language-option.active {
+  background: #111111;
+  color: #F9F9F7;
+}
+
+/* Select dropdown options styling */
+select {
+  background-color: #F9F9F7;
+  color: #111111;
+}
+
+select option {
+  background-color: #F9F9F7;
+  color: #111111;
+  padding: 12px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #E5E5E0;
+}
+
+select option:hover,
+select option:focus,
+select option:checked {
+  background-color: #111111 !important;
+  background: #111111 !important;
+  color: #F9F9F7 !important;
+}
+
+/* For Firefox */
+select option:checked {
+  background: #111111 linear-gradient(0deg, #111111 0%, #111111 100%) !important;
+  color: #F9F9F7 !important;
+}
+
+/* Disabled option */
+select option:disabled {
+  color: #999999;
+  opacity: 0.5;
+}

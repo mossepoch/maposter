@@ -1,0 +1,17 @@
+{
+  "name": "Justlogo - Map Poster Generator",
+  "short_name": "Justlogo",
+  "description": "Generate beautiful, minimalist map posters for any city in the world",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F9F7",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

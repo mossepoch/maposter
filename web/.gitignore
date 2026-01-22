@@ -1,0 +1,9 @@
+# 环境变量
+.env
+
+# Docker 相关
+.docker/
+
+# 临时文件
+*.log
+*.tmp

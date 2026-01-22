@@ -1,0 +1,7 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+python-multipart==0.0.6
+
+# 复用主项目的依赖
+# 注意：需要在容器中安装父目录的 requirements.txt
